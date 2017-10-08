@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Created At</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let expense of expenses">
+        <td>{{ expense.type }}</td>
+        <td>{{ expense.amount }}</td>
+        <td>{{ expense.createdAt.toLocaleDateString() }}</td>
+    </tr>
+    </tbody>
+</table>
