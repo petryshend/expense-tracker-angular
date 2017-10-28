@@ -9,7 +9,7 @@ export class ExpenseService {
     }
     getExpensesSlowly(): Promise<Expense[]> {
         return new Promise(resolve => {
-            setTimeout(() => resolve(this.getExpenses()), 2000);
+            setTimeout(() => resolve(this.getExpenses()), 1);
         });
     }
 }

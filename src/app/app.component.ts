@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Expense} from './expense';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,4 @@ import {Expense} from './expense';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  newExpense: Expense = new Expense(3, 'type', 'new', 0, new Date(Date.now()));
 }

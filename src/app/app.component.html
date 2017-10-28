@@ -1,60 +1,6 @@
-<div class="navigation">
-  <a href="/" class="btn btn-default">Today</a>
-  <a href="/all" class="btn btn-default">All</a>
-  <a href="/logout" class="btn btn-default pull-right">Logout</a>
-</div>
+<nav>
+  <a routerLink="/login">Login</a>
+  <a routerLink="/list">List</a>
+</nav>
 
-<div class="row">
-  <div class="col-md-4">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new-expense-modal">
-      Create expense
-    </button>
-  </div>
-  <div class="col-md-4">
-    <p class="bg-info total-spent">This month: {{ 'spend this months goes here' }}</p>
-  </div>
-  <div class="col-md-4">
-    <p class="bg-primary total-spent">Total: {{ 'Get total spent should be here' }}</p>
-  </div>
-</div>
-
-<expenses></expenses>
-
-<!-- Modal -->
-<div class="modal fade" id="new-expense-modal" tabindex="-1" role="dialog" aria-labelledby="new-expense-modalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <form action="/new_expense" class="form" method="post" id="create-expense-form">
-          <div class="form-group">
-            <label for="new-expense-amount">Amount</label>
-            <input type="number" step="0.01" class="form-control" id="new-expense-amount" name="new-expense-amount" placeholder="Amount">
-          </div>
-          <div class="form-group">
-            <label for="new-expense-type">Type</label>
-            <select class="form-control" name="new-expense-type" id="new-expense-type">
-              <option value="food">{{ 'Food' }}</option>
-              <option value="fuel">{{ 'Fuel' }}</option>
-              <option value="transport">{{ 'transport' }}</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="new-expense-comment">Comment</label>
-            <input type="text" class="form-control" id="new-expense-comment" name="new-expense-comment" placeholder="Comment">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button
-          type="button"
-          class="btn btn-primary"
-          id="create-expense-btn"
-        >
-          Create record
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
